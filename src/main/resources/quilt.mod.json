@@ -1,25 +1,28 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "io.github.stereo528",
+		"id": "hud_tweaks",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "HUDTweaks",
+			"description": "HUDTweaks is like a mix of CustomHUD and MiniHUD, with a lot less features and customizability.",
 			"contributors": {
-				"Your name here": "Owner"
+				"Stereo528": "Owner"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://stereo528.github.io",
+				"repository": "https://github.com/Stereo528/HUDTweaks",
+				"issues": "https://github.com/Stereo528/HUDTweaks/issues"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"license": "BSD-3-Clause",
+			"icon": "assets/hud_tweaks/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"client": [
+				"io.github.stereo528.hud_tweaks.HUDTweaksClient"
+			]
 		},
 		"depends": [
 			{
@@ -36,5 +39,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "hud_tweaks.mixins.json"
 }
