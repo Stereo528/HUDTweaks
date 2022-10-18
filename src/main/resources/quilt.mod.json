@@ -20,9 +20,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"client": [
-				"io.github.stereo528.hud_tweaks.HUDTweaksClient"
-			]
+			"client_init": "io.github.stereo528.hud_tweaks.HUDTweaksClient"
 		},
 		"depends": [
 			{
@@ -39,5 +37,6 @@
 			}
 		]
 	},
-	"mixin": "hud_tweaks.mixins.json"
+	"mixin": "hud_tweaks.mixins.json",
+	"environment": "client"
 }
