@@ -6,6 +6,11 @@ quilt_loader = "0.17.4"
 
 quilted_fabric_api = "4.0.0-beta.14+0.62.0-1.19.2"
 
+cloth_config_version = "8.2.88"
+lazydfu_version = "0.1.2"
+sodium_version = "mc1.19.2-0.4.4"
+mod_menu_version = "4.0.0"
+
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_mappings" }
@@ -14,10 +19,18 @@ quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loade
 quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
 quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
 
+lazydfu = { module = "maven.modrinth:lazydfu", version.ref = "lazydfu_version" }
+cloth_config = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "cloth_config_version" }
+sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
+
+mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
+
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]
 quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
+dev_mods = [ "lazydfu" ]
+dependencies = [ "quilt_loader", "cloth_config", "quilted_fabric_api" ]
 
 [plugins]
 quilt_loom = { id = "org.quiltmc.loom", version = "1.0.+" }

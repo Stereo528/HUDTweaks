@@ -9,7 +9,9 @@ version = getVersion()
 group = project.maven_group
 
 repositories {
-
+	maven { url = "https://api.modrinth.com/maven" }
+	maven { url = "https://maven.terraformersmc.com/releases/" }
+	maven { url = "https://maven.shedaniel.me/" }
 }
 
 
@@ -19,8 +21,8 @@ dependencies {
 		mappings "org.quiltmc:quilt-mappings:${libs.versions.quilt.mappings.get()}:intermediary-v2"
 		officialMojangMappings()
 	}
-	modImplementation libs.quilt.loader
-	modImplementation libs.quilted.fabric.api
+	modImplementation libs.bundles.dependencies
+	modLocalRuntime(libs.bundles.dev.mods) { exclude group: "net.fabricmc"; exclude group: "net.fabricmc.fabric-api"; exclude group: "net.fabricmc.loader" }
 }
 
 processResources {
