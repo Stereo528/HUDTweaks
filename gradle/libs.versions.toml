@@ -6,11 +6,11 @@ quilt_loader = "0.17.4"
 
 quilted_fabric_api = "4.0.0-beta.14+0.62.0-1.19.2"
 
-cloth_config_version = "8.2.88"
 lazydfu_version = "0.1.2"
 sodium_version = "mc1.19.2-0.4.4"
-mod_menu_version = "4.0.0"
+mod_menu_version = "4.1.0"
 joml_version = "1.10.4"
+midnightlib_version = "1.0.0-quilt"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -21,10 +21,10 @@ quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-a
 quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
 
 lazydfu = { module = "maven.modrinth:lazydfu", version.ref = "lazydfu_version" }
-cloth_config = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "cloth_config_version" }
 sodium = { module = "maven.modrinth:sodium", version.ref = "sodium_version" }
 joml = { module = "org.joml:joml", version.ref = "joml_version" }
 mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_version" }
+midnightlib = { module = "maven.modrinth:midnightlib", version.ref = "midnightlib_version"}
 
 
 
@@ -32,7 +32,7 @@ mod_menu = { module = "com.terraformersmc:modmenu", version.ref = "mod_menu_vers
 [bundles]
 quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
 dev_mods = [ "lazydfu", "joml", "sodium" ]
-dependencies = [ "quilt_loader", "cloth_config", "quilted_fabric_api" ]
+dependencies = [ "quilt_loader", "midnightlib", "quilted_fabric_api", "mod_menu" ]
 
 [plugins]
 quilt_loom = { id = "org.quiltmc.loom", version = "1.0.+" }

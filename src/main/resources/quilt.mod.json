@@ -20,7 +20,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"client_init": "io.github.stereo528.hud_tweaks.HUDTweaksClient"
+			"client_init": "io.github.stereo528.hud_tweaks.HUDTweaksClient",
+			"modmenu": "io.github.stereo528.hud_tweaks.config.ModMenuIntegration"
 		},
 		"depends": [
 			{

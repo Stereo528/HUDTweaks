@@ -1,0 +1,10 @@
+{
+  "hud_tweaks.midnightconfig.title": "HUDTweaks",
+  "hud_tweaks.midnightconfig.fps": "Display FPS",
+  "hud_tweaks.midnightconfig.coords": "Display Coordinates",
+  "hud_tweaks.midnightconfig.cpu": "Display CPU Model",
+  "hud_tweaks.midnightconfig.gpu": "Display GPU Model",
+  "hud_tweaks.midnightconfig.cpuUsage": "Display CPU Usage",
+  "hud_tweaks.midnightconfig.gpuUsage": "Display GPU Usage",
+  "hud_tweaks.midnightconfig.cpuAndGpuOnRight": "Display CPU/GPU Stats on Right"
+}
